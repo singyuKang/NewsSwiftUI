@@ -16,13 +16,10 @@ struct ContentView: View {
             List(networkManager.posts) { post in
                 NavigationLink(destination: DetailView(url: post.url)) {
                     HStack {
-                        
                         Text(String(post.points))
                         Text(post.title)
                     }
                 }
-           
-              
             }.navigationBarTitle("News")
         }.onAppear {
             self.networkManager.fetchData()
@@ -39,8 +36,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-let posts : [Post] = [
-//    Post(id: "1", title: "hello"),
-//    Post(id: "2", title: "myna"),
-//    Post(id: "3", title: "hsadasd")
-]
+let posts : [Post] = []
+
+
